@@ -1,30 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <link rel='manifest' href='./manifest.json'>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title> Grafitti </title>
-  <link rel= "stylesheet" href= "style.css">
-  <link rel ="stylesheet" href = "css/key.css">
+  <head>
+    <meta charset="utf-8">
+    <link rel='manifest' href='./manifest.json'>
+    <meta name="viewport" content="width=device-width">
+    <title>IT202-project2</title>
 
-</head>
+    <!-- bootstrap style sheet -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- my css file  -->
+    <link rel="stylesheet" href="css/app.css">
 
-<body>
-    <header>
+    <style>
+        
+body {
+        color: #E74C3C;
+}
+h1 {
+        color: #0E6655  ;
+}
+p {
+        color: #0E6655  ;
+        }
+        .template {display: none;}
+        .Open {color: pink;}
+        .Completed {color: gray;}
+        .bd-placeholder-img {
+          font-size: 1.125rem;
+          text-anchor: middle;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+        }
 
-    </header>
+        @media (min-width: 780px) {
+          .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+          }
+        }
 
-    <main>
+        #map {
+        height: 500px;
+        max-width: 100%;
+        }
 
-    </main>
+      </style>
+  </head>
+
+  <body>
+      
+      < body background = "https://www.xmple.com/wallpaper/highlight-gradient-grey-blue-linear-1920x1080-c2-87cefa-d3d3d3-l-33-a-270-f-21.svg"></body>
+    <!-- navigation bar -->
+      
+      
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#home">Chicago Graffiti Removal</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#home">MAIN PAGE<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#screen2">MAP</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#screen3">LIST</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">ABOUT</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- home page -->
+    <section class="content" id="home">
+
+      <div id="home-header">
+        <div class="header">City of Chicago Graffiti Removal!</div>
+        <p class="header-par">Look up removal request by Ward Number and Status</p>
+      </div>
+
+      <form id="filters" class="form-inline my-2 my-lg-0">
+        <input id="input-search-bar" class="form-control mr-sm-2" type="text" placeholder="Enter Ward Number" aria-label="Search">
+        <select name="results" id="results">
+          <option></option>
+          <option value="Completed">Completed</option>
+          <option value="Open">Open</option>
+        </select>
+      </form>
+      <button id="searchBtn" class="btn btn-outline-success my-2 my-sm-0" type="submit">GO</button>
+
+    </section>
 
 
-    <script src= ""> </script>
+
+    <!-- /map page -->
+    <section class="content" id="screen2">
+      <div id="map"></div>
+    </section>
+
+      
+      
+    <!-- list page -->
+    <section class="content" id="screen3">
+
+      <div id="list-header">
+        <div class="header">Below is a list of Requests</div>
+        <p class="header-par">Return to Main Page for another search entry.</p>
+      </div>
+
+      <!-- placeholder for cards -->
+      <div id="cards"></div>
+
+      <div class="card template" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+          <p class="card-location">Text Placeholder.</p>
+          <p class="card-srn">Placeholder Text.</p>
+          <p class="card-where-located">Placeholder Text.</p>
+          <p class="card-type-surface">Placeholder Text.</p>
+          <p class="card-date-created">Placeholder Text.</p>
+          <p class="card-compl-date">Placeholder Text.</p>
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div>
+    </section>
+      
+    <!-- about page -->
+    <section class="content" id="about">
+      <div id="about-header">
+        <div class="header">About Us</div>
+        <p class="header-par">IT 202 Project 2. This project can be accessed at <a href="https://github.com/Ayimus/it202-project2">AYIMUS</a> </p>
+        <p class="header-par">The app lets user view Graffiti in Chicago Land Area by Ward number. Use may use to view it in a list form or directly view on the map.</p>
+      </div>
+    </section>
+      
+      
 
 
-</body>
+  </body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <!-- From bootstrap jquery, slim, and popper.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <script src="js/app.js"></script>
+
+  <script>
+    // register the service worker for offline use
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .register('./sw.js')
+        .then(function() {
+          console.log("Service Worker Registered");
+        });
+    }
+  </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACQ-Se5XgECXNgPfbY88TBNMYoijTtSUI&callback=initMap"></script>
+
 
 </html>
-

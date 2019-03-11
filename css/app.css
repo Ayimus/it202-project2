@@ -1,0 +1,24 @@
+html {
+  font-family: Times New Roman", Times, serif;
+}
+
+
+
+.header {
+  text-align: center;
+  font-size: 500%;
+}
+
+.header-par {
+  text-align: center;
+  font-size: 250%;
+}
+
+#search {
+  margin: 40%;
+  padding: 10% 0%;
+}
+.anc-list {
+  text-align: center;
+  font-size: 150%;
+}
