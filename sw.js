@@ -2,7 +2,7 @@
 
 version = '1.0';
 
-let cacheName = 'GG_Removal' + version;
+let cacheName = 'City Graffiti Removal' + version;
 
 self.addEventListener('install', e => {
   let timeStamp = Date.now();
@@ -11,8 +11,6 @@ self.addEventListener('install', e => {
       return cache.addAll([
         `./`,
         `./index.html`,
-        `./letterM.png`,
-        `./manifest.json`,
         `./sw.js`
       ])
       .then(() => self.skipWaiting());
@@ -20,7 +18,6 @@ self.addEventListener('install', e => {
   )
 });
 
-// https://stackoverflow.com/questions/41009167/what-is-the-use-of-self-clients-claim
 
 self.addEventListener('activate',  event => {
   event.waitUntil(self.clients.claim());
